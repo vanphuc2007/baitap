@@ -1,0 +1,285 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f5f2;
+}
+
+.navbar{
+    background:white;
+    padding:18px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.navbar-brand{
+    font-size:32px;
+    font-weight:800;
+}
+
+.nav-link{
+    color:#111 !important;
+    font-weight:500;
+}
+
+.hero{
+    padding:140px 0 80px;
+}
+
+.hero-box{
+    background:white;
+    border-radius:40px;
+    padding:60px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.hero-subtitle{
+    color:#c08b5c;
+    font-weight:700;
+}
+
+.hero h1{
+    font-size:65px;
+    font-weight:800;
+    margin:20px 0;
+}
+
+.hero p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.main-btn{
+    background:#c08b5c;
+    color:white;
+    border:none;
+    padding:16px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.hero-image{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:35px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:#c08b5c;
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:52px;
+    font-weight:800;
+}
+
+.menu-section{
+    padding:100px 0;
+}
+
+.search-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    border-radius:60px;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    margin-bottom:40px;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+.filter-wrapper{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    border:none;
+    background:white;
+    padding:12px 24px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+.filter-btn.active{
+    background:#111;
+    color:white;
+}
+
+.drink-card{
+    background:white;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.drink-card:hover{
+    transform:translateY(-10px);
+}
+
+.drink-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.drink-content{
+    padding:25px;
+}
+
+.price{
+    color:#c08b5c;
+    font-size:22px;
+    font-weight:700;
+    margin:20px 0;
+}
+
+.cart-btn{
+    width:100%;
+    border:none;
+    background:#111;
+    color:white;
+    padding:14px;
+    border-radius:50px;
+}
+
+.reservation{
+    background:#111;
+    color:white;
+    padding:120px 0;
+}
+
+.reservation-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.restaurant-map{
+    background:#1c1c1c;
+    border-radius:35px;
+    padding:40px;
+}
+
+.table-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.table-item{
+    height:120px;
+    border-radius:25px;
+    background:#2a2a2a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.table-item.active{
+    background:#c08b5c;
+}
+
+.vip{
+    background:#3b2b20;
+}
+
+.booking-form-box{
+    background:white;
+    color:#111;
+    border-radius:35px;
+    padding:40px;
+}
+
+.booking-input{
+    height:60px;
+    border-radius:18px;
+    padding-left:20px;
+}
+
+.cart-floating{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:70px;
+    height:70px;
+    background:#c08b5c;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    z-index:999;
+}
+
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:28px;
+    height:28px;
+    background:#111;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+.payment-left{
+    background:#111;
+    color:white;
+    padding:50px;
+}
+
+.payment-icons{
+    display:flex;
+    gap:20px;
+    font-size:45px;
+}
+
+.payment-input{
+    height:60px;
+    border-radius:18px;
+    padding-left:20px;
+}
+
+@media(max-width:992px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .reservation-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}

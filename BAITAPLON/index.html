@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CaféBook Premium</title>
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                ☕ CaféBook
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav"
+            >
+
+                <ul class="navbar-nav ms-auto gap-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reservation">
+                            Reservation
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-box">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <span class="hero-subtitle">
+                            PREMIUM COFFEE EXPERIENCE
+                        </span>
+
+                        <h1>
+                            Crafted Coffee
+                            For Modern Lifestyle
+                        </h1>
+
+                        <p>
+                            Hệ thống café hiện đại với đặt bàn realtime,
+                            thanh toán online và chọn chỗ trực tiếp.
+                        </p>
+
+                        <a href="#menu" class="main-btn">
+                            Explore Menu
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <img
+                            class="hero-image"
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section class="menu-section" id="menu">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>OUR MENU</span>
+
+                <h2>
+                    Featured Drinks
+                </h2>
+
+            </div>
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search coffee..."
+                >
+
+            </div>
+
+            <!-- FILTER -->
+
+            <div class="filter-wrapper">
+
+                <button
+                    class="filter-btn active"
+                    data-category="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="coffee"
+                >
+                    Coffee
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="tea"
+                >
+                    Tea
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="smoothie"
+                >
+                    Smoothie
+                </button>
+
+            </div>
+
+            <!-- DRINK LIST -->
+
+            <div class="row" id="drinkList"></div>
+
+        </div>
+
+    </section>
+
+    <!-- RESERVATION -->
+
+    <section class="reservation" id="reservation">
+
+        <div class="container">
+
+            <div class="section-title text-white">
+
+                <span>BOOK TABLE</span>
+
+                <h2>
+                    Choose Your Seat
+                </h2>
+
+            </div>
+
+            <div class="reservation-wrapper">
+
+                <!-- LEFT -->
+
+                <div class="restaurant-map">
+
+                    <h4 class="mb-4 fw-bold">
+                        Restaurant Layout
+                    </h4>
+
+                    <div class="table-grid">
+
+                        <div class="table-item" data-table="A1">
+                            A1
+                        </div>
+
+                        <div class="table-item" data-table="A2">
+                            A2
+                        </div>
+
+                        <div class="table-item vip" data-table="VIP 1">
+                            VIP
+                        </div>
+
+                        <div class="table-item" data-table="B1">
+                            B1
+                        </div>
+
+                        <div class="table-item" data-table="B2">
+                            B2
+                        </div>
+
+                        <div class="table-item vip" data-table="VIP 2">
+                            VIP
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="booking-form-box">
+
+                    <h4 class="fw-bold mb-4">
+                        Reservation Details
+                    </h4>
+
+                    <form id="reservationForm">
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Customer Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control booking-input"
+                                id="customerName"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control booking-input"
+                                id="phone"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control booking-input"
+                                id="email"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control booking-input"
+                                    id="date"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    class="form-control booking-input"
+                                    id="time"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Selected Table
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control booking-input"
+                                id="selectedTable"
+                                readonly
+                            >
+
+                        </div>
+
+                        <button
+                            class="main-btn w-100"
+                            type="submit"
+                        >
+                            Confirm Reservation
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FLOATING CART -->
+
+    <div
+        class="cart-floating"
+        data-bs-toggle="modal"
+        data-bs-target="#cartModal"
+    >
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <div class="cart-count" id="cartCount">
+            0
+        </div>
+
+    </div>
+
+    <!-- CART MODAL -->
+
+    <div class="modal fade" id="cartModal">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content rounded-5 border-0">
+
+                <div class="modal-body p-5">
+
+                    <div class="d-flex justify-content-between mb-4">
+
+                        <h2 class="fw-bold">
+                            Your Cart
+                        </h2>
+
+                        <button
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+
+                    </div>
+
+                    <div id="cartItems"></div>
+
+                    <div
+                        class="
+                        d-flex
+                        justify-content-between
+                        align-items-center
+                        mt-4
+                        "
+                    >
+
+                        <h4>Total</h4>
+
+                        <h3 id="cartTotal">
+                            0 VNĐ
+                        </h3>
+
+                    </div>
+
+                    <button
+                        class="main-btn w-100 mt-4"
+                        data-bs-toggle="modal"
+                        data-bs-target="#paymentModal"
+                    >
+                        Proceed To Payment
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PAYMENT -->
+
+    <div class="modal fade" id="paymentModal">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content rounded-5 border-0 overflow-hidden">
+
+                <div class="row g-0">
+
+                    <!-- LEFT -->
+
+                    <div class="col-lg-5 payment-left">
+
+                        <h2 class="fw-bold mb-4">
+                            Payment
+                        </h2>
+
+                        <p class="opacity-75">
+                            Secure international payment gateway
+                        </p>
+
+                        <div class="payment-icons">
+
+                            <i class="fa-brands fa-cc-visa"></i>
+
+                            <i class="fa-brands fa-cc-mastercard"></i>
+
+                            <i class="fa-brands fa-cc-amex"></i>
+
+                        </div>
+
+                        <hr class="my-5">
+
+                        <h5>Total Payment</h5>
+
+                        <h1 id="paymentTotal">
+                            0 VNĐ
+                        </h1>
+
+                    </div>
+
+                    <!-- RIGHT -->
+
+                    <div class="col-lg-7 p-5">
+
+                        <form id="paymentForm">
+
+                            <div class="mb-4">
+
+                                <label class="form-label">
+                                    Card Number
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control payment-input"
+                                    id="cardNumber"
+                                    placeholder="1234 5678 9012 3456"
+                                    maxlength="19"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="mb-4">
+
+                                <label class="form-label">
+                                    Card Holder
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control payment-input"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4">
+
+                                    <label class="form-label">
+                                        Expire Date
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control payment-input"
+                                        placeholder="MM/YY"
+                                        required
+                                    >
+
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+
+                                    <label class="form-label">
+                                        CVV
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        class="form-control payment-input"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="main-btn w-100 mt-3"
+                                type="submit"
+                            >
+                                Pay Securely
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
